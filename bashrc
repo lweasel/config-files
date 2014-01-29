@@ -137,3 +137,16 @@ function c() { echo "$*" | bc -l; }
 
 # view head and tail of a file
 function ends() { (head;echo;tail) < $1; }
+
+# setup PATH
+PATH=${PATH}:/home/odando/.local/bin/
+PATH=${PATH}:/home/odando/bin
+export PATH
+
+# setup virtualenvwrapper commands
+export WORKON_HOME=/home/odando/.virtualenvs
+export PROJECT_HOME=/home/odando/projects
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Set up powerline
+. /home/odando/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
