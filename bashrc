@@ -139,8 +139,9 @@ function c() { echo "$*" | bc -l; }
 function ends() { (head;echo;tail) < $1; }
 
 # setup PATH
-PATH=${PATH}:/home/odando/.local/bin/
-PATH=${PATH}:/home/odando/bin
+PATH=${PATH}:${HOME}/.local/bin/
+PATH=${PATH}:${HOME}/bin
+PATH=${PATH}:${HOME}/tools/flux-simulator-1.2.1/bin
 export PATH
 
 # setup virtualenvwrapper commands
