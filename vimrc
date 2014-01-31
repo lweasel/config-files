@@ -50,3 +50,5 @@ Bundle 'tpope/vim-fugitive'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
