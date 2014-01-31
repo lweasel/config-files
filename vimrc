@@ -8,6 +8,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Disable help appearing when I accidentally hit F1
+:nmap <F1> <nop>
+
 syntax on
 
 let mapleader = ','
