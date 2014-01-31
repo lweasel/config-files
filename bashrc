@@ -120,6 +120,9 @@ set -o vi
 # Set default editor to vi
 export EDITOR=vi
 
+# Allow Ctrl+S, Ctrl+Q to work in Vim
+stty -ixon -ixoff
+
 # Ctrl+D must be pressed twice
 export IGNOREEOF=1
 

@@ -16,6 +16,11 @@ nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
 
+" Quit in all modes with fewer keypresses
+nmap <c-q> :q<CR>
+vmap <c-q> <Esc><c-s>
+imap <c-q> <Esc><c-s>
+
 syntax on
 
 let mapleader = ','
