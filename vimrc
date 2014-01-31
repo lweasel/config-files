@@ -11,6 +11,11 @@ set expandtab
 " Disable help appearing when I accidentally hit F1
 :nmap <F1> <nop>
 
+" Save in all modes with fewer keypresses
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
 syntax on
 
 let mapleader = ','
