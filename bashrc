@@ -145,6 +145,9 @@ function ends() { (head;echo;tail) < $1; }
 PATH=${PATH}:${HOME}/.local/bin/
 PATH=${PATH}:${HOME}/bin
 PATH=${PATH}:${HOME}/tools/flux-simulator-1.2.1/bin
+PATH=${PATH}:${HOME}/tools/bowtie-1.0.0
+PATH=${PATH}:${HOME}/tools/tophat-2.0.10.Linux_x86_64
+PATH=${PATH}:${HOME}/tools/cufflinks-2.1.1.Linux_x86_64
 export PATH
 
 # setup virtualenvwrapper commands
