@@ -156,5 +156,8 @@ export WORKON_HOME=/home/odando/.virtualenvs
 export PROJECT_HOME=/home/odando/projects
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Useful environment variables
+export PYTHON_2_7_SITE_PACKAGES=$HOME/.local/lib/python2.7/site-packages
+
 # Set up powerline
 . /home/odando/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
