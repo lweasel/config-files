@@ -9,7 +9,9 @@ set shiftwidth=4
 set expandtab
 
 " Disable help appearing when I accidentally hit F1
-:nmap <F1> <nop>
+nmap <F1> <nop>
+vmap <F1> <nop>
+imap <F1> <nop>
 
 " Save in all modes with fewer keypresses
 nmap <c-s> :w<CR>
