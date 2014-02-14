@@ -47,8 +47,12 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 
+let g:syntastic_always_populate_loc_list = 1
+
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
+nnoremap [l :lnext<CR>
+nnoremap ]l :lprev<CR>
