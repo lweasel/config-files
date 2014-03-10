@@ -58,3 +58,5 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap [l :lnext<CR>
 nnoremap ]l :lprev<CR>
+
+cnoremap sudow w !sudo tee % >/dev/null
