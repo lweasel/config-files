@@ -59,4 +59,8 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap [l :lnext<CR>
 nnoremap ]l :lprev<CR>
 
+" Command to save to read-only files
 cnoremap sudow w !sudo tee % >/dev/null
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
