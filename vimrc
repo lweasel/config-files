@@ -9,21 +9,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Disable help appearing when I accidentally hit F1
-nmap <F1> <nop>
-vmap <F1> <nop>
-imap <F1> <nop>
-
-" Save in all modes with fewer keypresses
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv
-imap <c-s> <Esc><c-s>
-
-" Quit in all modes with fewer keypresses
-nmap <c-q> :q<CR>
-vmap <c-q> <Esc><c-s>
-imap <c-q> <Esc><c-s>
-
 syntax on
 
 let mapleader = ','
@@ -52,6 +37,21 @@ Bundle 'tpope/vim-fugitive'
 
 let g:syntastic_always_populate_loc_list = 1
 
+" Disable help appearing when I accidentally hit F1
+nmap <F1> <nop>
+vmap <F1> <nop>
+imap <F1> <nop>
+
+" Save in all modes with fewer keypresses
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
+" Quit in all modes with fewer keypresses
+nmap <c-q> :q<CR>
+vmap <c-q> <Esc><c-s>
+imap <c-q> <Esc><c-s>
+
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
@@ -70,6 +70,10 @@ nnoremap <leader>l :set list!<CR>
 nnoremap <leader>ww <c-w>w
 nnoremap <leader>wo <c-w>o
 nnoremap <leader>ws <c-w>s
+
+" Stop accidentally entering recording mode
+nnoremap Q q
+nnoremap q <Nop>
 
 " Function and key mapping to string trailing whitespace from a file.
 " Do this automatically when saving python files.
