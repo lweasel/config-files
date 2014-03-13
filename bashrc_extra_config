@@ -28,6 +28,10 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
+# aliases for my inability to type correctly
+alias bi='vi'
+alias ci='vi'
+
 # Access to machines
 alias nrg='ssh odando@nrg.inf.ed.ac.uk'
 alias syn='ssh odando@synprot.inf.ed.ac.uk'
