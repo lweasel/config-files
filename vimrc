@@ -64,7 +64,12 @@ nnoremap ]l :lprev<CR>
 cnoremap sudow w !sudo tee % >/dev/null
 
 " Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
+
+" Quicker (for me) dealing with multiple windows
+nnoremap <leader>ww <c-w>w
+nnoremap <leader>wo <c-w>o
+nnoremap <leader>ws <c-w>s
 
 " Function and key mapping to string trailing whitespace from a file.
 " Do this automatically when saving python files.
