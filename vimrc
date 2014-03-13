@@ -40,7 +40,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'Valloric/YouCompleteMe'
@@ -64,3 +64,24 @@ cnoremap sudow w !sudo tee % >/dev/null
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
+
+" Function and key mapping to string trailing whitespace from a file.
+" Do this automatically when saving python files.
+" (http://vimcasts.org/episodes/tidying-whitespace/)
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+nnoremap <silent> <leader>sw :call <SID>StripTrailingWhitespaces()<CR>
+
+autocmd BufWritePre *.py :call <SID>StripTrailingWhitespaces()
+
+
