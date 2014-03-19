@@ -94,4 +94,9 @@ nnoremap <silent> <leader>sw :call <SID>StripTrailingWhitespaces()<CR>
 
 autocmd BufWritePre *.py :call <SID>StripTrailingWhitespaces()
 
+" Make it easier to edit files in the same directory as the current file
+" (http://vimcasts.org/episodes/the-edit-command/)
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
 
