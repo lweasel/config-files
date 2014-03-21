@@ -9,6 +9,10 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Add line numbers with muted colour
+set number
+:highlight LineNr ctermfg=darkgrey
+
 syntax on
 
 let mapleader = ','
