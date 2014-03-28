@@ -10,11 +10,13 @@ shopt -s cmdhist
 HISTSIZE=100000
 HISTFILESIZE=100000
 
-# git aliases
+# git and tig aliases
 alias gs='git status'
 alias gc='git commit -m'
 alias gd='git diff'
 alias ga='git add'
+
+alias ts='tig status'
 
 # some more ls aliases
 alias ll='ls -alF'
