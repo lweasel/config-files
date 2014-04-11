@@ -1,24 +1,34 @@
-set rtp+=$PYTHON_2_7_SITE_PACKAGES/powerline/bindings/vim
+"****************************************
+" General editor properties
+"****************************************
 
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set autowrite " Save file when moving away from buffer
-
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" Add line numbers with muted colour
 set number
-highlight LineNr ctermfg=darkgrey
 
 syntax on
+
+"****************************************
+" Colouring
+"****************************************
+
+" Muted colour for line numbers
+highlight LineNr ctermfg=darkgrey
+
 
 " Make comments a little brighter
 highlight Comment ctermfg=lightblue
 
-let mapleader = ','
+"****************************************
+" Set up powerline
+"****************************************
+
+set rtp+=$PYTHON_2_7_SITE_PACKAGES/powerline/bindings/vim
 
 if ! has('gui_running')
     set ttimeoutlen=10
@@ -28,6 +38,10 @@ if ! has('gui_running')
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
+
+"****************************************
+" Manage plugins with Vundle
+"****************************************
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -45,7 +59,11 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Raimondi/delimitMate'
 
-let g:syntastic_always_populate_loc_list = 1
+"****************************************
+" Keyboard remappings and shortcuts
+"****************************************
+
+let mapleader = ','
 
 " Disable help appearing when I accidentally hit F1
 nmap <F1> <nop>
@@ -62,21 +80,13 @@ nmap <c-q> :q<CR>
 vmap <c-q> <Esc><c-s>
 imap <c-q> <Esc><c-s>
 
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>u :GundoToggle<CR>
-nnoremap <leader>p :CtrlP<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap [l :lnext<CR>
-nnoremap ]l :lprev<CR>
-
 " Command to save to read-only files
 cnoremap sudow w !sudo tee % >/dev/null
 
-" Shortcut to rapidly toggle `set list`
+" Toggle visibility of hidden characters
 nnoremap <leader>l :set list!<CR>
 
-" Quicker (for me) dealing with multiple windows
+" Quicker (for me) handling of multiple windows
 nnoremap <leader>ww <c-w>w
 nnoremap <leader>wo <c-w>o
 nnoremap <leader>ws <c-w>s
@@ -110,8 +120,14 @@ cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
 
-" Source vimrc file after saving it
+" Easy editing of vimrc file, and source vimrc file after editing it
+nmap <leader>v :edit $MYVIMRC<CR>
+
 autocmd BufWritePost .vimrc source $MYVIMRC
 
-" Easy editing of vimrc file
-nmap <leader>v :edit $MYVIMRC<CR>
+" Various shortcuts for plugin functionality
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>p :CtrlP<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
