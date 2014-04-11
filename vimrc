@@ -41,6 +41,9 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'Raimondi/delimitMate'
 
 let g:syntastic_always_populate_loc_list = 1
 
@@ -107,3 +110,8 @@ cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
 
+" Source vimrc file after saving it
+autocmd BufWritePost .vimrc source $MYVIMRC
+
+" Easy editing of vimrc file
+nmap <leader>v :edit $MYVIMRC<CR>
