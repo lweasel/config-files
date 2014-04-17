@@ -94,6 +94,9 @@ nnoremap <leader>ws <c-w>s
 nnoremap Q q
 nnoremap q <Nop>
 
+" Toggle search highlighting on/off, and show current value.
+nnoremap <leader><Space> :set hlsearch! hlsearch?<CR>
+
 " Function and key mapping to string trailing whitespace from a file.
 " Do this automatically when saving python files.
 " (http://vimcasts.org/episodes/tidying-whitespace/)
