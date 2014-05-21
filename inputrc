@@ -1,1 +1,5 @@
 set editing-mode vi
+set keymap vi
+
+"yn":yank-nth-arg
+"yl":yank-last-arg
