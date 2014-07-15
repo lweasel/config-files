@@ -48,15 +48,18 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'Raimondi/delimitMate'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "****************************************
 " Keyboard remappings and shortcuts
@@ -133,3 +136,20 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
+
+"****************************************
+" UltiSnips setup
+"****************************************
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+"****************************************
+" Dealing with makefiles
+"****************************************
+
+" Don't expand tabs into spaces
+autocmd FileType make setlocal noexpandtab
