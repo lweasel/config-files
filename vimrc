@@ -13,6 +13,8 @@ set number
 
 syntax on
 
+let mapleader = ','
+
 "****************************************
 " Colouring
 "****************************************
@@ -20,9 +22,27 @@ syntax on
 " Muted colour for line numbers
 highlight LineNr ctermfg=darkgrey
 
-
 " Make comments a little brighter
 highlight Comment ctermfg=lightblue
+
+" Make highlighted search text readable
+highlight Search ctermbg=grey
+
+"****************************************
+" Searching
+"****************************************
+
+" Show first match for pattern whilst typing
+set incsearch
+
+" Set search highlighting on by default
+set hlsearch
+
+" Toggle search highlighting on/off, and show current value.
+nnoremap <leader><Space> :set hlsearch! hlsearch?<CR>
+
+" Clear search highlights
+nnoremap <leader>c :let @/=""<CR>
 
 "****************************************
 " Set up powerline
@@ -65,8 +85,6 @@ Plugin 'honza/vim-snippets'
 " Keyboard remappings and shortcuts
 "****************************************
 
-let mapleader = ','
-
 " Disable help appearing when I accidentally hit F1
 nmap <F1> <nop>
 vmap <F1> <nop>
@@ -96,9 +114,6 @@ nnoremap <leader>ws <c-w>s
 " Stop accidentally entering recording mode
 nnoremap Q q
 nnoremap q <Nop>
-
-" Toggle search highlighting on/off, and show current value.
-nnoremap <leader><Space> :set hlsearch! hlsearch?<CR>
 
 " Function and key mapping to string trailing whitespace from a file.
 " Do this automatically when saving python files.
@@ -153,3 +168,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Don't expand tabs into spaces
 autocmd FileType make setlocal noexpandtab
+
+"****************************************
+" Syntastic setup
+let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
+let g:syntastic_python_flake8_post_args='--ignore=E501'
+let g:syntastic_python_pylint_post_args='--disable=F0401,W0403,W0212,C0325,W0622'
