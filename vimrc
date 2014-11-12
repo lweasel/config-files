@@ -173,4 +173,4 @@ autocmd FileType make setlocal noexpandtab
 " Syntastic setup
 let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
 let g:syntastic_python_flake8_post_args='--ignore=E501'
-let g:syntastic_python_pylint_post_args='--disable=F0401,W0403,W0212,C0325,W0622'
+let g:syntastic_python_pylint_post_args='--disable=F0401,W0403,W0212,C0325,W0622,W0142,R0903 --function-rgx="[a-z_][a-z0-9_]{2,50}$" --class-attribute-rgx="([A-Za-z_][A-Za-z0-9_]{2,50}|(__.*__))$"'
