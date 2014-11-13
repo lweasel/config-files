@@ -75,6 +75,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Raimondi/delimitMate'
 
