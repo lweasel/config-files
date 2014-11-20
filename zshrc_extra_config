@@ -1,0 +1,40 @@
+#----------------
+# Setup Powerline
+#----------------
+export VIRTUAL_ENV_DISABLE_PROMPT=true
+. $PYTHON_2_7_SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
+
+#--------
+# Aliases
+#--------
+alias ts='tig status'
+
+#------------
+# Vi settings
+#------------
+
+# Use Vi mode
+set -o vi
+
+# Set default editor to vi
+export EDITOR=vi
+
+# Allow Ctrl+S, Ctrl+Q to work in vi
+stty -ixon -ixoff
+
+#-----------------
+# Useful functions
+#-----------------
+
+# quick calculator
+function c() { echo "$*" | bc -l; }
+
+#-------------------
+# For clumsy fingers
+#-------------------
+
+# Ctrl+D doesn't exit shell
+set -o ignoreeof
+
+alias bi='vi'
+alias ci='vi'
