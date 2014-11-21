@@ -14,13 +14,15 @@ alias ts='tig status'
 #------------
 
 # Use Vi mode
-set -o vi
+#set -o vi
 
 # Set default editor to vi
-export EDITOR=vi
+#export EDITOR=vi
 
 # Allow Ctrl+S, Ctrl+Q to work in vi
-stty -ixon -ixoff
+#stty -ixon -ixoff
+
+
 
 #-----------------
 # Useful functions
