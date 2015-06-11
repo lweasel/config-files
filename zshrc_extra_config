@@ -4,6 +4,12 @@
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 . $PYTHON_2_7_SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
 
+#----------------
+# Setup 'thefuck'
+#----------------
+
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
 #--------
 # Aliases
 #--------
@@ -21,8 +27,6 @@ alias ts='tig status'
 
 # Allow Ctrl+S, Ctrl+Q to work in vi
 #stty -ixon -ixoff
-
-
 
 #-----------------
 # Useful functions
