@@ -77,7 +77,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'Raimondi/delimitMate'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
