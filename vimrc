@@ -100,6 +100,10 @@ nmap <c-q> :q<CR>
 vmap <c-q> <Esc><c-s>
 imap <c-q> <Esc><c-s>
 
+" Easier indenting
+nmap <tab> v>g
+nmap <s-tab> v<g
+
 " Command to save to read-only files
 cnoremap sudow w !sudo tee % >/dev/null
 
