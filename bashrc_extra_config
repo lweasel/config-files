@@ -111,3 +111,9 @@ alias ci='vi'
 #########################################
 
 . $PYTHON_2_7_SITE_PACKAGES/powerline/bindings/bash/powerline.sh
+
+#########################################
+# Common functions for all shells
+#########################################
+
+source "$(dirname $0)/common_functions.sh"
